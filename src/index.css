@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://nextui.org/gradient-right-dark.svg");
+  background-color: #000;
 }
 
 code {
