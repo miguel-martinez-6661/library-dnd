@@ -7,7 +7,7 @@ const fetchBooks = (state:any, action:any) => {
   const { books } = action;
   return {
     ...state,
-    books
+    booksList: books
   }
 }
 

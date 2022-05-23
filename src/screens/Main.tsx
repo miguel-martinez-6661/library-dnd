@@ -4,7 +4,7 @@ import update from 'immutability-helper';
 import { Grid, Text } from '@nextui-org/react';
 import Book from '../components/Book';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBooks } from '../actions';
+import { fetchBooks } from '../actions/BookActions';
 import { getBooks } from '../selectors';
 import './styles.css';
 

@@ -1,3 +1,3 @@
-const getBooks = (state:any) => state.books;
+const getBooks = (state:any) => state.books.booksList;
 
 export { getBooks }

@@ -5,7 +5,6 @@ interface DragItem {
 }
 
 export const ItemTypes = {
-  CARD: 'card',
   BOOK: 'book'
 };
 

@@ -1,18 +1,9 @@
-import { booksActionType } from '../constants/ActionTypes';
-import createReducer from '../helpers/createReducer';
+import { combineReducers } from 'redux';
+import BookReducers from './BookReducers';
 
-const initialState = {}
+const rootReducer = combineReducers({
+  books: BookReducers
+  // other reducers hereq
+})
 
-const fetchBooks = (state:any, action:any) => {
-  const { books } = action;
-  return {
-    ...state,
-    books
-  }
-}
-
-const handlers = {
-  [booksActionType.BOOKS_FETCH_SUCCEEDED]: fetchBooks
-}
-
-export default createReducer(initialState, handlers);
+export default rootReducer

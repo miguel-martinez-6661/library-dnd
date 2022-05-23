@@ -69,7 +69,7 @@ const Book: FC<BookProps> = ({ id, text, photoUrl, index, moveBook }) => {
   drag(drop(ref));
 
   return (
-    <Grid ref={ref} key={id} xs={12} sm={12} md={6} lg={3} data-handler-id={handlerId}>
+    <Grid ref={ref} key={id} xs={12} sm={6} md={4} lg={1} data-handler-id={handlerId}>
       <Card hoverable clickable bordered>
         <Card.Body css={{ padding: 0 }}>
           <img src={photoUrl} style={{ height: '100%' }} alt="Book" />
