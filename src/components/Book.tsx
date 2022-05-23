@@ -1,6 +1,6 @@
 import React, { FC, useRef } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
-import type { Identifier, XYCoord } from 'dnd-core';
+import type { Identifier } from 'dnd-core';
 import { Card, Divider, Grid, Text } from '@nextui-org/react';
 import { DragItem, ItemTypes } from '../types/DragAndDrop';
 
@@ -36,25 +36,13 @@ const Book: FC<BookProps> = ({ id, text, photoUrl, index, moveBook }) => {
       if (dragIndex === hoverIndex) {
         return;
       }
-      // @ts-ignore
-      const hoverBoundingRect = ref.current?.getBoundingClientRect();
-      const hoverMiddleY =
-        (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
-      const clientOffset = monitor.getClientOffset();
-      const hoverClientY = (clientOffset as XYCoord).y - hoverBoundingRect.top;
-
-      if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
-        return;
-      }
-      if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
-        return;
-      }
 
       moveBook(dragIndex, hoverIndex);
       item.index = hoverIndex;
     }
   });
 
+  // eslint-disable-next-line no-unused-vars
   const [{ isDragging }, drag] = useDrag({
     type: ItemTypes.BOOK,
     item: () => {
@@ -64,13 +52,12 @@ const Book: FC<BookProps> = ({ id, text, photoUrl, index, moveBook }) => {
       isDragging: monitor.isDragging()
     })
   });
-  console.log(isDragging);
 
   drag(drop(ref));
 
   return (
-    <Grid ref={ref} key={id} xs={12} sm={6} md={4} lg={1} data-handler-id={handlerId}>
-      <Card hoverable clickable bordered>
+    <Grid ref={ref} key={id} xs={12} sm={6} md={4} lg={3} xl={1}>
+      <Card hoverable clickable bordered data-handler-id={handlerId}>
         <Card.Body css={{ padding: 0 }}>
           <img src={photoUrl} style={{ height: '100%' }} alt="Book" />
         </Card.Body>

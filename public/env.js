@@ -43,7 +43,7 @@ window.env = {
   "npm_package_dependencies_react_redux": "^8.0.1",
   "LSCOLORS": "Gxfxcxdxbxegedabagacad",
   "npm_package_devDependencies__typescript_eslint_parser": "^5.25.0",
-  "PATH": "/var/folders/ry/m6xz2r91545g7hc1xvcppdlh0000gn/T/yarn--1653334699870-0.2451582742733005:/Users/miguelmartinez/willdom/library/node_modules/.bin:/Users/miguelmartinez/.config/yarn/link/node_modules/.bin:/Users/miguelmartinez/.yarn/bin:/Users/miguelmartinez/.nvm/versions/node/v16.15.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/miguelmartinez/.nvm/versions/node/v16.15.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/miguelmartinez/.nvm/versions/node/v16.15.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/miguelmartinez/.nvm/versions/node/v16.15.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin",
+  "PATH": "/var/folders/ry/m6xz2r91545g7hc1xvcppdlh0000gn/T/yarn--1653337019601-0.5872315820653236:/Users/miguelmartinez/willdom/library/node_modules/.bin:/Users/miguelmartinez/.config/yarn/link/node_modules/.bin:/Users/miguelmartinez/.yarn/bin:/Users/miguelmartinez/.nvm/versions/node/v16.15.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/miguelmartinez/.nvm/versions/node/v16.15.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/miguelmartinez/.nvm/versions/node/v16.15.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/miguelmartinez/.nvm/versions/node/v16.15.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin",
   "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"start\"],\"original\":[\"start\"]}",
   "LaunchInstanceID": "9ED4698A-D3A1-41A1-BB30-152313958EE5",
   "_": "/Users/miguelmartinez/willdom/library/node_modules/.bin/react-dotenv",
