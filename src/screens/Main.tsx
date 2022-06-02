@@ -4,7 +4,7 @@ import update from 'immutability-helper';
 import { Grid, Text } from '@nextui-org/react';
 import Book from '../components/Book';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBooks } from '../actions/BookActions';
+import { fetchBooks, removeBook } from '../actions/BookActions';
 import { getBooks } from '../selectors';
 import './styles.css';
 
@@ -19,7 +19,7 @@ const Main = () => {
   }, [dispatch])
 
   useEffect(() => {
-    setBooks(data)
+    setBooks(data);
   }, [data])
 
   const moveBook = useCallback((dragIndex: number, hoverIndex: number) => {
@@ -33,6 +33,11 @@ const Main = () => {
     );
   }, []);
 
+  const remove = (id:number) : void => {
+    dispatch(removeBook(id, books))
+    // despacahar nueva accion
+  }
+
   const renderBook = useCallback((b: BookType, index: number) => {
     return (
       <Book
@@ -42,12 +47,13 @@ const Main = () => {
         text={b.title}
         index={index}
         moveBook={moveBook}
+        onClose={remove}
       />
     );
   }, [moveBook])
 
   return (
-    <div className='container'>
+    <div className='container'style={{ minHeight: window.screen.height }}>
       <Text
         h1
         css={{

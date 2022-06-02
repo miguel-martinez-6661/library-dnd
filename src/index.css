@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("https://nextui.org/gradient-right-dark.svg");
   background-color: #000;
+  background-size: cover;
 }
 
 code {

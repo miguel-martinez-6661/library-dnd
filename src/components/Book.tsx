@@ -9,10 +9,11 @@ interface BookProps {
     text: string,
     photoUrl: string,
     index: number,
-    moveBook: (dragIndex: number, hoverIndex: number) => void;
+    moveBook: (dragIndex: number, hoverIndex: number) => void,
+    onClose: (id:number) => void;
 }
 
-const Book: FC<BookProps> = ({ id, text, photoUrl, index, moveBook }) => {
+const Book: FC<BookProps> = ({ id, text, photoUrl, index, moveBook, onClose }) => {
   const ref = useRef(null);
 
   const [{ handlerId }, drop] = useDrop<
@@ -56,9 +57,12 @@ const Book: FC<BookProps> = ({ id, text, photoUrl, index, moveBook }) => {
   drag(drop(ref));
 
   return (
-    <Grid ref={ref} key={id} xs={12} sm={6} md={4} lg={3} xl={1}>
+    <Grid ref={ref} key={id} xs={12} sm={6} md={4} lg={3} xl={2}>
       <Card hoverable clickable bordered data-handler-id={handlerId}>
         <Card.Body css={{ padding: 0 }}>
+        <a onClick={() => onClose(id)} style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <img src="x.png" alt="none" style={{ width: 27 }} />
+          </a>
           <img src={photoUrl} style={{ height: '100%' }} alt="Book" />
         </Card.Body>
         <Divider />
